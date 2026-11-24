@@ -34,6 +34,26 @@ Run lint and typecheck before declaring any task done.
 Use EAS to build, sign, and submit the app in the cloud (`eas build`, `eas submit`) and to ship over-the-air updates (`eas update`) — no local Xcode or Android Studio required. Run EAS CLI as `bunx eas-cli <command>` in Bun projects, or `npx eas-cli@latest <command>` otherwise; substitute that for bare `eas` in docs examples.
 Docs: https://docs.expo.dev/eas/index.md
 
+## Skills (always on — do not ask the user to name them)
+
+Load the matching skill with the `skill` tool **before** writing code, then follow it. No need to ask permission; no need for the user to remember IDs.
+
+| Task | Load |
+| --- | --- |
+| Screens, navigation, app structure, native modules, offline | `frontend-mobile-development-react-native-architecture` |
+| RN styling, Reanimated, navigation visuals | `ui-design-react-native-design` |
+| Global state / server state (Zustand, Jotai, React Query) | `frontend-mobile-development-react-state-management` |
+| Types, generics, API models | `javascript-typescript-typescript-advanced-types` |
+| Tests, TDD, test setup | `javascript-typescript-javascript-testing-patterns` |
+| Design tokens, theming, component library | `ui-design-design-system-patterns` |
+| Animations, transitions, loading/feedback states | `ui-design-interaction-design` |
+| A11y audit, screen readers, WCAG | `ui-design-accessibility-compliance` |
+| Colour, spacing, typography, visual hierarchy | `ui-design-visual-design-foundations` |
+| Web target (app runs in browser) | `frontend-mobile-development-nextjs-app-router-patterns` |
+| Backend/API service | `javascript-typescript-nodejs-backend-patterns` |
+
+Rules: load every skill whose row applies (usually 2–3 per task), skip ones that do not; never load the native-Kotlin skills (`android-development`, `mobile-android-design`, `ui-design-mobile-android-design`) for this Expo project; and mention in one line which skills were applied so the user can see the policy working.
+
 ## Rules
 
 - If `ios/` and `android/` directories do not exist, they are generated (Continuous Native Generation). Never create or edit them by hand — configure native behavior in `app.json` and config plugins.
